@@ -57,7 +57,7 @@ export default function PurchasePopup() {
 
   return (
     <div className="fixed top-4 right-4 z-50 animate-slide-in-right">
-      <div className="bg-red-500 text-white rounded-lg shadow-2xl p-4 max-w-sm relative">
+      <div className="bg-red-500 text-white rounded-lg shadow-2xl p-3 sm:p-4 max-w-[280px] sm:max-w-sm relative">
         <button
           onClick={() => setIsVisible(false)}
           className="absolute top-2 right-2 text-white/80 hover:text-white transition-colors"
@@ -66,16 +66,18 @@ export default function PurchasePopup() {
           <X className="w-4 h-4" />
         </button>
 
-        <div className="flex items-start gap-3 pr-6">
-          <div className="bg-white/20 p-2 rounded-full flex-shrink-0">
-            <ShoppingBag className="w-5 h-5" />
+        <div className="flex items-start gap-2 sm:gap-3 pr-5 sm:pr-6">
+          <div className="bg-white/20 p-1.5 sm:p-2 rounded-full flex-shrink-0">
+            <ShoppingBag className="w-4 h-4 sm:w-5 sm:h-5" />
           </div>
           <div className="flex-1">
-            <p className="font-bold text-sm mb-1">Compra confirmada!</p>
-            <p className="text-sm">
+            <p className="font-bold text-xs sm:text-sm mb-0.5 sm:mb-1">Compra confirmada!</p>
+            <p className="text-xs sm:text-sm leading-tight">
               <span className="font-semibold">{currentName}</span> de {location}
             </p>
-            <p className="text-xs mt-1 text-white/90">acabou de comprar o Reset 7 Dias Sem Glúten™</p>
+            <p className="text-[11px] sm:text-xs mt-0.5 sm:mt-1 text-white/90 leading-tight">
+              acabou de comprar o Reset 7 Dias Sem Glúten™
+            </p>
           </div>
         </div>
       </div>
