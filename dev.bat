@@ -1,5 +1,4 @@
 @echo off
-echo 🔥 Iniciando o servidor de desenvolvimento Bolt...
-call npm install
-call npm run dev
+echo Inicializando o servidor de desenvolvimento...
+npm run dev
 pause
