@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="https://r2.fivemanage.com/loB7DwO6sLPQ9WKdZy10U/ProgramadeResetSemGlten.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reset 7 Dias Sem Glúten™</title>
+
+    <!-- Meta Pixel Code -->
+    <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      
+      fbq('init', '1187724413264876');
+      fbq('track', 'PageView');
+    </script>
+    <!-- End Meta Pixel Code -->
+
+    <!-- UTMify -->
+    <script>
+      window.pixelId = "68ed37ebb77ab7ef1739fb38";
+      var a = document.createElement("script");
+      a.setAttribute("async", "");
+      a.setAttribute("defer", "");
+      a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+      document.head.appendChild(a);
+    </script>
+
+    <script
+      src="https://cdn.utmify.com.br/scripts/utms/latest.js"
+      data-utmify-prevent-xcod-sck
+      data-utmify-prevent-subids
+      async
+      defer
+    ></script>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <!-- Eventos customizados (chame via React nos momentos certos) -->
+    <script>
+      window.fbqViewContent = function() {
+        fbq('track', 'ViewContent');
+      };
+
+      window.fbqAddToCart = function() {
+        fbq('track', 'AddToCart');
+      };
+
+      window.fbqInitiateCheckout = function() {
+        fbq('track', 'InitiateCheckout');
+      };
+
+      window.fbqPurchase = function(value = 197.00, currency = 'BRL') {
+        fbq('track', 'Purchase', {
+          value: value,
+          currency: currency
+        });
+      };
+    </script>
+
+    <!-- Entrada do App - Corrigido -->
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
