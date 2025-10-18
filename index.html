@@ -3,51 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Reset 7 Dias Sem Glúten™</title>
-    <link rel="icon" type="image/png" href="https://r2.fivemanage.com/loB7DwO6sLPQ9WKdZy10U/ProgramadeResetSemGlten.png" />
-
-    <!-- Meta Pixel Code -->
-    <script>
-      const eventId = `pv-${Date.now()}-${Math.random().toString(36).substring(2, 8)}`;
-      window.pageViewEventId = eventId;
-
-      !function(f,b,e,v,n,t,s)
-      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-      n.queue=[];t=b.createElement(e);t.async=!0;
-      t.src=v;s=b.getElementsByTagName(e)[0];
-      s.parentNode.insertBefore(t,s)}(window, document,'script',
-      'https://connect.facebook.net/en_US/fbevents.js');
-
-      fbq('init', '1187724413264876');
-      fbq('track', 'PageView', { event_id: eventId });
-
-      // ENVIA PRO BACKEND (deduplicação CAPI)
-      fetch('/api/fb-capi', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          event_name: 'PageView',
-          event_id: eventId,
-          event_time: Math.floor(Date.now() / 1000),
-          action_source: 'website',
-          user_data: {
-            client_user_agent: navigator.userAgent
-            // Você pode adicionar email hash (em) e mais dados aqui
-          }
-        })
-      });
-    </script>
-    <!-- End Meta Pixel Code -->
-
-    <!-- UTMify -->
     <script>
       window.pixelId = "68ed37ebb77ab7ef1739fb38";
       var a = document.createElement("script");
-      a.async = true;
-      a.defer = true;
-      a.src = "https://cdn.utmify.com.br/scripts/pixel/pixel.js";
+      a.setAttribute("async", "");
+      a.setAttribute("defer", "");
+      a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
       document.head.appendChild(a);
     </script>
     <script
@@ -57,25 +18,39 @@
       async
       defer
     ></script>
+    <title>Reset 7 Dias Sem Glúten™</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://r2.fivemanage.com/loB7DwO6sLPQ9WKdZy10U/ProgramadeResetSemGlten.png"
+    />
+    <script>
+      fbq('track', 'Purchase', {
+        content_ids: ['reset-7-dias-sem-gluten'],
+        content_type: 'product',
+        value: 142.52,
+        currency: 'USD',
+        contents: [{
+          id: 'reset-7-dias-sem-gluten',
+          quantity: 1
+        }],
+        content_name: 'Reset 7 Dias Sem Glúten',
+        content_category: 'Digital Product',
+        eventID: 'purchase_' + new Date().getTime(),
+        user_data: {
+          em: ['7b17fb0bd173f625b58636fb796407c22b3d16fc78302d79f0fd30c2fc2fc068'],
+          ph: [null]
+        },
+        custom_data: {
+          currency: 'USD',
+          value: '142.52'
+        },
+        event_time: Math.floor(Date.now() / 1000)
+      });
+    </script>
   </head>
   <body>
     <div id="root"></div>
-
-    <!-- Eventos customizados -->
-    <script>
-      window.fbqViewContent = function() {
-        fbq('track', 'ViewContent');
-      };
-      window.fbqAddToCart = function() {
-        fbq('track', 'AddToCart');
-      };
-      window.fbqInitiateCheckout = function() {
-        fbq('track', 'InitiateCheckout');
-      };
-      window.fbqPurchase = function(value = 197.00, currency = 'BRL') {
-        fbq('track', 'Purchase', { value, currency });
-      };
-    </script>
 
     <script type="module" src="/src/main.tsx"></script>
   </body>
